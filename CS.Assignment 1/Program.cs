@@ -11,7 +11,7 @@ namespace DemoConsoleApplication
     {
         static void Main(string[] args)
         {
-            
+
 
             ///array 1
 
@@ -67,13 +67,13 @@ namespace DemoConsoleApplication
             ///String2
 
             /*      string str = "GeeksForGeeks";
-              str.Replace('s', 'G');
+      
                   Console.WriteLine("Enter The number ");
 
                       string num = Console.ReadLine();
-                 string newnum= num.Replace(".", "[.]");
+                 string newIP= num.Replace(".", "[.]");
 
-                      Console.WriteLine("Your Expected Output is {0}", newnum);
+                      Console.WriteLine("Your Expected Output is {0}", newIP);
                   }*/
 
 
@@ -106,23 +106,30 @@ namespace DemoConsoleApplication
             Console.WriteLine(jewelsinhand);*/
 
 
-       /*     int[,] accounts = new[,] { { 1, 2, 3 }, { 3, 2, 1 } };
-            int n = accounts.GetLength(1);
-            
-            int m = accounts.GetLength(0);
-            int MaxWealth = 0;
-            for (int i = 0; i < n; i++)
+            ////odd-substrings
+            int[] arr = { 10, 11, 12 };
+
+            int sum = 0;
+
+            for (int i = 0; i < arr.Length; i++)
             {
-                int wealth = 0;
-                for (int j = 0; j < m; j++)
+
+
+                for (int j = i; j < arr.Length; j += 2)
                 {
-                    wealth += accounts[i][j];
+
+                    for (int k = i; k <= j; k++)
+                    {
+                        /*Console.WriteLine(k);*/
+
+                        sum += arr[k];
+                    }
                 }
-                MaxWealth = Math.max(MaxWealth, wealth);
             }
-            return MaxWealth;
-        }*/
+            Console.WriteLine(sum);
+
+
+        }
 
     }
     }
-}
